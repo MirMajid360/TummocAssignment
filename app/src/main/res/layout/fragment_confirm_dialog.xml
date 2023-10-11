@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp">
+
+
+            <RelativeLayout
+                android:id="@+id/statusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/statusIocn"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_green_check"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/statusMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/statusIocn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="success message"
+                    android:textColor="@color/icon_black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/btnPositive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/statusMessage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="Back to Home"
+                    android:textColor="@color/green"
+                    android:textFontWeight="800"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/categoriesViewParent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/categoriesView"
+                    layout="@layout/layout_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

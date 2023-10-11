@@ -1,0 +1,25 @@
+<!-- dialog_content.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ListView
+        android:id="@+id/listView"
+        android:background="@color/white"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_cart_count"
+        android:padding="8dp"
+        android:src="@drawable/ic_close_round"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/listView"
+        android:layout_marginTop="20dp"
+        android:text="Close" />
+</RelativeLayout>

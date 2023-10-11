@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintStart_toEndOf="@id/ivProductImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintStart_toEndOf="@id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+
+        <ImageView
+            android:id="@+id/ivAddIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_rounded_corners"
+            android:padding="4dp"
+            android:src="@drawable/ic_add_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="30dp"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivAddIcon"
+            app:layout_constraintEnd_toStartOf="@id/ivAddIcon"
+            app:layout_constraintTop_toTopOf="@id/ivAddIcon" />
+
+        <ImageView
+            android:id="@+id/ivRemoveIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_rounded_corners"
+            android:padding="4dp"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintEnd_toStartOf="@id/tvQuantity"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:padding="2dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="145"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
